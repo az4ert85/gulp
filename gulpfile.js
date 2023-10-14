@@ -33,4 +33,8 @@ function css()
     .pipe(dest('dist/css'))
 }
 
-exports.default = series(html, css)
+function watcher(){
+    watch("app/html/**/*.html", html)
+}
+
+exports.default = series(html, css, watcher)
