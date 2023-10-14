@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/az4ert85/gulp/issues"
   },
-  "homepage": "https://github.com/az4ert85/gulp#readme"
+  "homepage": "https://github.com/az4ert85/gulp#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
