@@ -25,6 +25,7 @@ function css()
         browsers:'last 2 versions',
         cascade:false
     }))
+    .pipe(sass())
     .pipe(cssnano())
     .pipe(rename({
         suffix:'.min',
@@ -35,6 +36,7 @@ function css()
 
 function watcher(){
     watch("app/html/**/*.html", html)
+    watch("app/sass/**/*.scss", css)
 }
 
 exports.default = series(html, css, watcher)
